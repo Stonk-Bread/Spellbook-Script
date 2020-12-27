@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 convert_spell=`cat spellbook.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'`
 
@@ -11,11 +11,11 @@ translated_file=`wc -c translated_spellbook.txt`
 a=$original_file
 b=$translated_file
 
-if [ $a == $b ] 
+if [ "$a == $b" ] 
 then 
-    echo "The incantaion was successful." 
+    echo "The incantaion was successful $(whoami)." 
 else 
-    echo "Your casting was unsuccessful."
+    echo "Your casting was unsuccessful $(whoami)."
 fi
 
 # I am attempting to rot13 the content of spellbook.txt and output it to a new 
